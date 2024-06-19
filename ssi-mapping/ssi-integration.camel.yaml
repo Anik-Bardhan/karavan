@@ -4,3 +4,9 @@
     from:
       id: from-48e7
       uri: sftp
+      parameters:
+        host: 192.168.29.195
+        port: "2222"
+        directoryName: sftp_sftp_2
+        username: baton
+        password: Anik@bardhan25
