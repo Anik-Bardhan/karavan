@@ -1,0 +1,6 @@
+- route:
+    id: route-98e3
+    nodePrefixId: route-c40
+    from:
+      id: from-48e7
+      uri: sftp

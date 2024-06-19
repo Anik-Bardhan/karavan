@@ -1,0 +1,11 @@
+services:
+  ssi-mapping:
+    image: ssi-mapping
+    cpu_percent: 10
+    mem_limit: 1024M
+    mem_reservation: 512M
+    restart: always
+    ports:
+      - "8081:8080"
+    networks:
+      - karavan
