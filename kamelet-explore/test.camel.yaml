@@ -11,6 +11,11 @@
         username: baton
         password: testpass
       steps:
+        - to:
+            id: to-f245
+            uri: kamelet:atlasmap-transform
+            parameters:
+              admFilePath: sample
         - log:
             id: log-6c71
-            message: ${body}
+            message: hello from integration
