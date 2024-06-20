@@ -15,7 +15,7 @@
             id: to-f245
             uri: kamelet:atlasmap-transform
             parameters:
-              admFilePath: sample
+              admFilePath: SSI.json
         - log:
             id: log-6c71
             message: hello from integration
