@@ -8,6 +8,7 @@ import org.apache.camel.Processor;
 public class DataTransform implements Processor {
 
     public void process(Exchange exchange) throws Exception {
-        exchange.getIn().setBody("Hello World From Kamelet");
+        String source = exchange.getProperty("admFilePath", String.class);
+        exchange.getIn().setBody(source);
     }
 }

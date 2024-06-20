@@ -45,7 +45,7 @@ spec:
     - camel:kamelet
   template:
     route:
-      id: route-cb02
+      id: route-dd6f
       from:
         id: from-08ce
         uri: kamelet:source
@@ -55,4 +55,4 @@ spec:
               ref: DataTransform
           - log:
               id: log-f9a3
-              message: "{{admFilePath}}"
+              message: ${body}
