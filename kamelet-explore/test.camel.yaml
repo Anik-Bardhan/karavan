@@ -1,0 +1,16 @@
+- route:
+    id: route-c574
+    nodePrefixId: route-71a
+    from:
+      id: from-767d
+      uri: sftp
+      parameters:
+        host: 192.168.5.104
+        port: "2222"
+        directoryName: sftp_sftp_2
+        username: baton
+        password: testpass
+      steps:
+        - log:
+            id: log-6c71
+            message: ${body}
