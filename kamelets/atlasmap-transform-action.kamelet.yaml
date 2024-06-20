@@ -45,11 +45,18 @@ spec:
     - camel:kamelet
   template:
     route:
-      id: route-dd6f
+      id: route-f37c
       from:
         id: from-08ce
         uri: kamelet:source
         steps:
+          - setProperty:
+              id: setProperty-7d71
+              name: admFilePath
+              expression:
+                simple:
+                  id: simple-e414
+                  expression: "{{admFilePath}}"
           - process:
               id: process-e18c
               ref: DataTransform
