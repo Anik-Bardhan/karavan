@@ -5,6 +5,11 @@ import org.apache.camel.Processor;
 import java.util.*;
 import java.io.File;
 
+import io.atlasmap.api.AtlasContext;
+import io.atlasmap.api.AtlasContextFactory;
+import io.atlasmap.api.AtlasSession;
+import io.atlasmap.core.DefaultAtlasContextFactory;
+
 @Configuration
 @BindToRegistry("DataTransform")
 public class DataTransform implements Processor {

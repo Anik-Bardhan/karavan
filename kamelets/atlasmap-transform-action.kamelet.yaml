@@ -31,6 +31,14 @@ spec:
     required: []
     type: object
     properties:
+      sourceId:
+        title: SourceId
+        description: Source Id
+        type: string
+      targetId:
+        title: Target Id
+        description: Target Id
+        type: string
       admFilePath:
         title: ADM File Path
         description: ADM file path needed for data transformation.
@@ -43,13 +51,31 @@ spec:
   dependencies:
     - camel:core
     - camel:kamelet
+    - io.atlasmap:atlas.api:1.10.0
+    - io.atlasmap:atlas-core:2.5.2
+    - io.atlasmap:atlas-json-module:2.5.2
+    - io.atlasmap:atlas-csv-module:2.5.2
   template:
     route:
-      id: route-f37c
+      id: route-9964
       from:
         id: from-08ce
         uri: kamelet:source
         steps:
+          - setProperty:
+              id: setProperty-04e9
+              name: targetId
+              expression:
+                simple:
+                  id: simple-7c89
+                  expression: "{{targetId}}"
+          - setProperty:
+              id: setProperty-431a
+              name: sourceId
+              expression:
+                simple:
+                  id: simple-831a
+                  expression: "{{sourceId}}"
           - setProperty:
               id: setProperty-7d71
               name: admFilePath
